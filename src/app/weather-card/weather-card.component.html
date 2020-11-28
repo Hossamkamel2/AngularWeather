@@ -1,0 +1,30 @@
+<div @slide>
+<mat-card class="mat-elevation-z5">
+    <mat-card-header>
+      <mat-card-title>{{weatherDetail.name}}'s weather</mat-card-title>
+      <mat-card-subtitle>Today:{{Date | date:'longDate'}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="flex-row">
+            <div class="temp">
+              <span>{{toCelsius(weatherDetail.main['temp_max'])|number:'1.0-0'}} C</span>
+              <span>Feels like </span>
+              <span>{{toCelsius(weatherDetail.main['feels_like'])|number:'1.0-0'}} C</span>
+            </div>
+            <div class="outlook">
+              <img *ngIf="weatherDetail.weather[0]['description']==='clear sky'" src="https://openweathermap.org/img/wn/01d@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='few clouds'" src="https://openweathermap.org/img/wn/02d@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='scattered clouds'" src="https://openweathermap.org/img/wn/03d@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='broken clouds'" src="https://openweathermap.org/img/wn/04d@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='shower rain'" src="https://openweathermap.org/img/wn/09d@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='haze'" src="https://openweathermap.org/img/wn/50n@2x.png" />
+              <img *ngIf="weatherDetail.weather[0]['description']==='mist'" src="https://openweathermap.org/img/wn/50n@2x.png" />
+              <span>{{weatherDetail.weather[0]['description']}}</span>
+            </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+
+    </mat-card-actions>
+  </mat-card>
+</div>

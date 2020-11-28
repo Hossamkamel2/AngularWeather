@@ -1,0 +1,23 @@
+.full-width {
+  font-size: 40px;
+  width: 50%;
+  align-items: center;
+  display: block;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.btn1 {
+  margin: auto;
+  margin-top: 5px;
+  display: grid;
+}
+
+h4 {
+  font-family: cursive;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+
+  font-size: 20px;
+}

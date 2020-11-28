@@ -1,0 +1,18 @@
+<mat-spinner *ngIf="loading" diameter="50" style="margin:0 auto;" mode="indeterminate"></mat-spinner>
+ <form [formGroup]="form" class="example-form col" (ngSubmit)="onSubmit()">
+    
+    <div class="aligner">
+        <h4 @fade>Get Your city Weather Now</h4>
+    <mat-form-field class="full-width ">
+      <mat-label>City</mat-label>
+      <input formControlName="citySearch" type="text" matInput formControlName="citySearch" placeholder="Ex. Cairo"> 
+      <mat-error *ngIf="city.touched && city.invalid">
+        City is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+    
+    </div>
+    <button mat-raised-button [disabled]="form.invalid" class="btn1" color="primary">Get Weather</button>
+</form> 
+
+<app-weather-card  [weatherDetail]="weatherDetail" *ngIf="success" ></app-weather-card>
