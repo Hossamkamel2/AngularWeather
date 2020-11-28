@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherComponent } from './weather.component';
+import { By } from '@angular/platform-browser';
 
 describe('WeatherComponent', () => {
   let component: WeatherComponent;
@@ -22,4 +23,11 @@ describe('WeatherComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should disable button if invalid input',()=>{
+    component.cityset="";
+    fixture.detectChanges();
+    let de=fixture.debugElement.query(By.css('.btn1'));
+    expect(de.properties['disabled']).toBeTruthy();
+  })
 });

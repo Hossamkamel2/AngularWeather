@@ -9,7 +9,7 @@
             <div class="temp">
               <span>{{toCelsius(weatherDetail.main['temp_max'])|number:'1.0-0'}} C</span>
               <span>Feels like </span>
-              <span>{{toCelsius(weatherDetail.main['feels_like'])|number:'1.0-0'}} C</span>
+              <span class="feelslike">{{toCelsius(weatherDetail.main['feels_like'])|number:'1.0-0'}} C</span>
             </div>
             <div class="outlook">
               <img *ngIf="weatherDetail.weather[0]['description']==='clear sky'" src="https://openweathermap.org/img/wn/01d@2x.png" />

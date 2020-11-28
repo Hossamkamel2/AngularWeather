@@ -9,6 +9,7 @@ import { UnAuthorizedError } from './../common/UnAuthorized-error';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { LogsService } from './../Services/logs/logs.service';
 
+
 @Component({
   selector: 'app-weather',
   templateUrl: './weather.component.html',
@@ -31,12 +32,14 @@ export class WeatherComponent implements OnInit {
    
   }
   form=new FormGroup({
-    'citySearch' : new FormControl('', [
+    citySearch : new FormControl('', [
       Validators.required,
     ])
 
   })
-
+  set cityset(value){
+    this.form.get('citySearch').setValue=value;
+  }
   get city(){
     return this.form.get('citySearch');
   }
