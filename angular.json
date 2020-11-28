@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "DisplayWeather-App:build"
+            "browserTarget": "displayweather-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "DisplayWeather-App:build:production"
+              "browserTarget": "displayweather-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "DisplayWeather-App:build"
+            "browserTarget": "displayweather-app:build"
           }
         },
         "test": {
@@ -112,18 +112,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "DisplayWeather-App:serve"
+            "devServerTarget": "displayweather-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "DisplayWeather-App:serve:production"
+              "devServerTarget": "displayweather-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "DisplayWeather-App",
+  "defaultProject": "displayweather-app",
   "cli": {
     "analytics": "1c1b718a-f4f7-4ad8-9f03-4280a4502e3a"
   }
