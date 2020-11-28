@@ -7,8 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot --prod"
   },
+  "engine": { "node": "12.16.1", "npm": "6.13.4" }
+  ,
   "private": true,
   "dependencies": {
     "@angular/animations": "^9.1.12",
@@ -26,7 +29,9 @@
     "ngx-toastr": "^13.1.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "zone.js": "~0.10.2",
+    "typescript": "~3.8.3"
+
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.0",
